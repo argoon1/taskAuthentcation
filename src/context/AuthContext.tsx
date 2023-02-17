@@ -34,7 +34,8 @@ export function AuthContextProvider(props: React.PropsWithChildren<{}>) {
       );
       const data = await response.json();
       setRoutesEnabled(data[tokenGetString]);
-      navigate("/", { replace: true });
+      if (data[tokenGetString]) return navigate("/", { replace: true });
+      return navigate("/login", { replace: true });
     } catch (e) {
       setRoutesEnabled(false);
     }
