@@ -23,7 +23,7 @@ export const Navigation = () => {
         <Route path="/secure-link" element={<SecureLink />} />
       </Route>
 
-      <Route path="*" element={<Navigate to="/login" replace />} />
+      <Route path="*" element={<Navigate to="/login" />} />
     </Routes>
   );
 };
