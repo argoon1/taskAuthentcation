@@ -10,7 +10,15 @@ export const Navigation = () => {
   return (
     <Routes>
       <Route path={"/login"} element={<Login />} />
-      <Route path="/" element={<RequireAuth isAuth={userIsAuthenticated()} />}>
+      <Route
+        path="/"
+        element={
+          <RequireAuth
+            isAuth={userIsAuthenticated()}
+            redirectString={"login"}
+          />
+        }
+      >
         <Route path="/" element={<Home />} />
         <Route path="/secure-link" element={<SecureLink />} />
       </Route>
