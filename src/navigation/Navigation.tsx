@@ -11,7 +11,6 @@ export const Navigation = () => {
     <Routes>
       <Route path={"/login"} element={<Login />} />
       <Route
-        path="/"
         element={
           <RequireAuth
             isAuth={userIsAuthenticated()}
@@ -23,7 +22,7 @@ export const Navigation = () => {
         <Route path="/secure-link" element={<SecureLink />} />
       </Route>
 
-      <Route path="*" element={<Navigate to="/login" />} />
+      <Route path="*" element={<Navigate to="login" />} />
     </Routes>
   );
 };
