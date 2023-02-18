@@ -1,6 +1,8 @@
-import { AuthenticationButtonProps } from "../sharedAuthenticationButtonsTypes";
 import { buttonEnablesUserRoutes } from "../authenticationButtonsUtils";
 import { useAuthContext } from "../../../context/AuthContext";
+interface AuthenticationButtonProps {
+  authenticationToken: string;
+}
 export const FetchAuthenticationButton = ({
   authenticationToken,
 }: AuthenticationButtonProps) => {
