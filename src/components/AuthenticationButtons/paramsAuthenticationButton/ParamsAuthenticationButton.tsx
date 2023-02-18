@@ -1,11 +1,11 @@
-import { AuthenticationButtonProps } from "../sharedAuthenticationButtonsTypes";
 import { buttonEnablesUserRoutes } from "../authenticationButtonsUtils";
-import { useNavigate } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
+interface AuthenticationButtonProps {
+  authenticationToken: string;
+}
 export const ParamsAuthenticationButton = ({
   authenticationToken,
 }: AuthenticationButtonProps) => {
-  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
 
   return (
